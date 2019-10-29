@@ -13,7 +13,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build"
+    "build": "ng build --prod",
+    "deploy": "ng build --prod --no-progress"
   },
   "dependencies": {
     "@angular/animations": "^8.2.11",
