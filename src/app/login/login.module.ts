@@ -1,9 +1,15 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
+import { RouterModule } from "@angular/router";
+
+import {
+	MatButtonModule,
+	MatCardModule,
+	MatFormFieldModule,
+	MatInputModule
+} from "@angular/material";
 
 import { LoginComponent } from "./login.component";
-import { MatFormFieldModule, MatButtonModule, MatInputModule, MatCardModule } from "@angular/material";
-import { RouterModule } from "@angular/router";
 
 @NgModule({
 	declarations: [LoginComponent],
