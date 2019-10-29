@@ -3,13 +3,13 @@
 		<mat-card>
 			<h1 class="mat-h1">Login</h1>
 			<mat-card-content>
-				<form novalidate>
+				<form [formGroup]="loginForm" (ngSubmit)="authenticate()">
 					<mat-form-field class="form-field-full">
-						<input matInput placeholder="Username">
+						<input matInput placeholder="Username" formControlName="email">
 					</mat-form-field>
 
 					<mat-form-field class="form-field-full">
-						<input type="password" matInput placeholder="Password">
+						<input type="password" matInput placeholder="Password" formControlName="password">
 					</mat-form-field>
 
 					<div class="submit-container">
