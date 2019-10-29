@@ -1,0 +1,40 @@
+{
+  "name": "simple-budget-tracker",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "Rin Minase",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RinMinase/simple-budget-tracker"
+  },
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build"
+  },
+  "dependencies": {
+    "@angular/animations": "^8.2.11",
+    "@angular/common": "^8.2.11",
+    "@angular/core": "^8.2.11",
+    "@angular/fire": "^5.2.1",
+    "@angular/forms": "^8.2.11",
+    "@angular/material": "^8.2.3",
+    "@angular/platform-browser": "^8.2.11",
+    "@angular/router": "^8.2.11",
+    "material-icons": "^0.3.1",
+    "rxjs": "^6.4.0",
+    "zone.js": "~0.9.1"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^0.803.14",
+    "@angular/cdk": "^8.2.3",
+    "@angular/cli": "^8.3.14",
+    "@angular/compiler": "^8.2.11",
+    "@angular/compiler-cli": "^8.2.11",
+    "@angular/platform-browser-dynamic": "^8.2.11",
+    "@types/node": "^8.9.4",
+    "firebase": "^7.2.2",
+    "typescript": "~3.5.3"
+  }
+}
