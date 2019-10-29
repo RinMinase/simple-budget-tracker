@@ -1,5 +1,7 @@
 {
   "name": "simple-budget-tracker",
+  "description": "A simple budget manager web application using Angular and deployed to Netlify",
+  "homepage": "https://track-budget.netlify.com/",
   "version": "0.1.0",
   "license": "MIT",
   "author": "Rin Minase",
