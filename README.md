@@ -1,5 +1,11 @@
 <h1 align="center"> Simple Budget Tracker </h1>
 
+<p align="center">
+    <a href="https://app.netlify.com/sites/anidb/deploys">
+        <img alt="Netlify-Status" src="https://img.shields.io/netlify/09b5bb1d-24a5-401d-b322-a267a04efd00?logo=netlify&style=for-the-badge">
+    </a>
+</p>
+
 ## Introduction
 _Add info here_
 
