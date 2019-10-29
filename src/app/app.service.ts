@@ -14,6 +14,11 @@ export class AppService {
 			.catch((error) => Promise.reject(error));
 	}
 
+	logout() {
+		return Promise.resolve(firebase.auth().signOut())
+			.catch((error) => Promise.reject(error));
+	}
+
 	auth() {
 		return new Promise((resolve, reject) => {
 			firebase.auth().onAuthStateChanged((isAuthenticated: any) => {
