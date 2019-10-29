@@ -19,10 +19,10 @@ import { LoginComponent } from "./login.component";
 		RouterModule.forChild([{ path: "login", component: LoginComponent }]),
 		ReactiveFormsModule,
 
-		MatFormFieldModule,
-		MatInputModule,
 		MatButtonModule,
 		MatCardModule,
+		MatFormFieldModule,
+		MatInputModule,
 	]
 })
 export class LoginModule { }
