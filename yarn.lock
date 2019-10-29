@@ -6164,6 +6164,11 @@ schema-utils@^2.0.0, schema-utils@^2.0.1:
     ajv "^6.10.2"
     ajv-keywords "^3.4.1"
 
+scss-spinners@^1.1.11:
+  version "1.1.11"
+  resolved "https://registry.yarnpkg.com/scss-spinners/-/scss-spinners-1.1.11.tgz#831d9660e4ddb97acf1988848bdfc27e00a6d6cc"
+  integrity sha512-XjoPWbOyzoOK5IzhnFkopdqhR8YRZg3kBJn8ARF8tDhqZ0pPjn02p6mKXHwvswbbBQOH88cPIJK47DzIGqtwxA==
+
 select-hose@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/select-hose/-/select-hose-2.0.0.tgz#625d8658f865af43ec962bfc376a37359a4994ca"
