@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { NavModule } from './nav/nav.module';
 
 const routes: Routes = [];
 
@@ -12,7 +14,10 @@ const routes: Routes = [];
 	],
 	imports: [
 		BrowserModule,
-		RouterModule.forRoot(routes)
+		RouterModule.forRoot(routes),
+		BrowserAnimationsModule,
+
+		NavModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent]
