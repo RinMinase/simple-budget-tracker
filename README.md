@@ -60,4 +60,4 @@ Task automation is based on [Yarn scripts](https://yarnpkg.com/lang/en/docs/cli/
 * <img width=20 height=20 src="https://yarnpkg.com/favicon.ico"> [Yarn](https://yarnpkg.com/) - Package Manager
 
 ## Deployed to
-* <img width=20 height=20 src="https://www.netlify.com/img/global/favicon/favicon-32x32.png"> [Netlify]()
+* <img width=20 height=20 src="https://www.netlify.com/img/global/favicon/favicon-32x32.png"> [Netlify](https://track-budget.netlify.com)
