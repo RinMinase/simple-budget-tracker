@@ -21,12 +21,8 @@
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true
   },
-  "files": [
-    "src/index.ts",
-  ],
-  "include": [
-    "src/**/*.ts"
-  ],
+  "files": [ "src/index.ts" ],
+  "include": [ "src/**/*.ts" ],
   "exclude": [
     "src/test.ts",
     "src/**/*.spec.ts"
