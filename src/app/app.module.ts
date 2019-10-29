@@ -6,6 +6,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { AppComponent } from "./app.component";
 import { NavModule } from "./nav/nav.module";
 import { LoginModule } from "./login/login.module";
+import { HomeModule } from './home/home.module';
 
 const routes: Routes = [];
 
@@ -20,6 +21,7 @@ const routes: Routes = [];
 
 		NavModule,
 		LoginModule,
+		HomeModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent]
