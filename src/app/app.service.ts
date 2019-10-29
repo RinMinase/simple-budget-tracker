@@ -14,4 +14,12 @@ export class AppService {
 			.catch((error) => Promise.reject(error));
 	}
 
+	auth() {
+		return new Promise((resolve, reject) => {
+			firebase.auth().onAuthStateChanged((isAuthenticated: any) => {
+				(isAuthenticated) ? resolve() : reject(new Error("Not authenticated"));
+			});
+		});
+	}
+
 }
