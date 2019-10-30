@@ -5,11 +5,8 @@ import { AppService } from "@app/app.service";
 
 @Component({
 	selector: "app-nav",
-	styles: [
-		".spacer { flex: 1 1 auto }",
-		".ml { margin-left: .75rem }",
-	],
 	templateUrl: "./nav.component.html",
+	styleUrls: ["./nav.component.scss"],
 })
 export class NavComponent implements OnInit {
 
