@@ -11,12 +11,25 @@ export class AppService {
 	private isLoggedIn = new BehaviorSubject(false);
 	currIsLoggedIn = this.isLoggedIn.asObservable();
 
+	private isSidenavOpen = new BehaviorSubject(true);
+	currIsSidenavOpen = this.isSidenavOpen.asObservable();
+
 	constructor() { }
 
+	/**
+	 * Observable Subjects
+	 */
 	setLoggedIn(state: boolean) {
 		this.isLoggedIn.next(state);
 	}
 
+	setSidenavOpen(state: boolean) {
+		this.isSidenavOpen.next(state);
+	}
+
+	/**
+	 * Service Functions
+	 */
 	login(email: string, password: string): any {
 		return Promise.resolve(firebase.auth().signInWithEmailAndPassword(email, password))
 			.catch((error) => Promise.reject(error));
