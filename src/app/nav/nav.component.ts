@@ -11,7 +11,8 @@ import { AppService } from "@app/app.service";
 	],
 	template: `
 		<mat-toolbar color="primary">
-			<span (click)="navigateHome()">Simple Budget Tracker</span>
+			<i class="material-icons">menu</i>
+			<span (click)="navigateHome()" class="ml">Simple Budget Tracker</span>
 			<span class="spacer"></span>
 			<button mat-button (click)="navigateUser()">
 				<span *ngIf="!isLoggedIn">Login</span>
