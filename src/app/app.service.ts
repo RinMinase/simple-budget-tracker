@@ -41,9 +41,9 @@ export class AppService {
 	}
 
 	auth() {
-		return new Promise((resolve, reject) => {
+		return new Promise((resolve) => {
 			firebase.auth().onAuthStateChanged((isAuthenticated: any) => {
-				(isAuthenticated) ? resolve() : reject(new Error("Not authenticated"));
+				(isAuthenticated) ? resolve(true) : resolve(false);
 			});
 		});
 	}
