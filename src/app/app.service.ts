@@ -9,12 +9,12 @@ export class AppService {
 
 	constructor() { }
 
-	login(email: string, password: string) {
+	login(email: string, password: string): any {
 		return Promise.resolve(firebase.auth().signInWithEmailAndPassword(email, password))
 			.catch((error) => Promise.reject(error));
 	}
 
-	logout() {
+	logout(): any {
 		return Promise.resolve(firebase.auth().signOut())
 			.catch((error) => Promise.reject(error));
 	}
