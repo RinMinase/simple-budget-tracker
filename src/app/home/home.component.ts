@@ -21,8 +21,11 @@ export class HomeComponent implements OnInit {
 		this.service.currIsSidenavOpen.subscribe((state) => this.isSidenavOpen = state);
 
 		this.service.auth()
-			.then(() => {
-			}).catch(() => this.router.navigateByUrl("/login"));
+			.then((isAuth) => {
+				if (!isAuth) {
+					this.router.navigateByUrl("/login")
+				}
+			});
 	}
 
 }

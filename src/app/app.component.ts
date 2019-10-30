@@ -20,6 +20,6 @@ export class AppComponent {
 
 		initializeApp(firebaseConfig);
 
-		this.service.auth().then(() => this.service.setLoggedIn(true));
+		this.service.auth().then((isAuth) => (isAuth) ? this.service.setLoggedIn(true) : null);
 	}
 }
