@@ -10,12 +10,16 @@ import { AppService } from '@app/app.service';
 })
 export class HomeComponent implements OnInit {
 
+	isSidenavOpen: boolean = true;
+
 	constructor(
 		private router: Router,
 		private service: AppService,
 	) { }
 
 	ngOnInit() {
+		this.service.currIsSidenavOpen.subscribe((state) => this.isSidenavOpen = state);
+
 		this.service.auth()
 			.then(() => {
 			}).catch(() => this.router.navigateByUrl("/login"));

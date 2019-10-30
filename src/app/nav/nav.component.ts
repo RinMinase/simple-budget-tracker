@@ -11,6 +11,7 @@ import { AppService } from "@app/app.service";
 export class NavComponent implements OnInit {
 
 	isLoggedIn: boolean = false;
+	isSidenavOpen: boolean = true;
 
 	constructor(
 		private router: Router,
@@ -19,6 +20,7 @@ export class NavComponent implements OnInit {
 
 	ngOnInit() {
 		this.service.currIsLoggedIn.subscribe((state) => this.isLoggedIn = state);
+		this.service.currIsSidenavOpen.subscribe((state) => this.isSidenavOpen = state);
 	}
 
 	navigateHome() {
@@ -34,6 +36,10 @@ export class NavComponent implements OnInit {
 		} else {
 			this.router.navigateByUrl("/login")
 		}
+	}
+
+	toggleSidenav() {
+		this.service.setSidenavOpen(!this.isSidenavOpen);
 	}
 
 }
