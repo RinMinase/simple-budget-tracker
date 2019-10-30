@@ -9,17 +9,7 @@ import { AppService } from "@app/app.service";
 		".spacer { flex: 1 1 auto }",
 		".ml { margin-left: .75rem }",
 	],
-	template: `
-		<mat-toolbar color="primary">
-			<i class="material-icons">menu</i>
-			<span (click)="navigateHome()" class="ml">Simple Budget Tracker</span>
-			<span class="spacer"></span>
-			<button mat-button (click)="navigateUser()">
-				<span *ngIf="!isLoggedIn">Login</span>
-				<span *ngIf="isLoggedIn">Logout</span>
-				<i class="material-icons ml">account_circle</i>
-			</button>
-		</mat-toolbar>`
+	templateUrl: "./nav.component.html",
 })
 export class NavComponent implements OnInit {
 
