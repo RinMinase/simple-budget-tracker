@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import { BehaviorSubject } from "rxjs";
 
 import * as firebase from "firebase/app";
 import "firebase/auth";
@@ -7,7 +8,14 @@ import "firebase/firestore";
 @Injectable({ providedIn: "root" })
 export class AppService {
 
+	private isLoggedIn = new BehaviorSubject(false);
+	currIsLoggedIn = this.isLoggedIn.asObservable();
+
 	constructor() { }
+
+	setLoggedIn(state: boolean) {
+		this.isLoggedIn.next(state);
+	}
 
 	login(email: string, password: string): any {
 		return Promise.resolve(firebase.auth().signInWithEmailAndPassword(email, password))
