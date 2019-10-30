@@ -35,8 +35,10 @@ export class LoginComponent implements OnInit {
 
 		const { email, password } = this.loginForm.value;
 		this.service.login(email, password)
-			.then(() => this.router.navigateByUrl("/"))
-			.catch((error) => {
+			.then(() => {
+				this.service.setLoggedIn(true);
+				this.router.navigateByUrl("/");
+			}).catch((error: any) => {
 				this.loading = false;
 
 				switch (error.code) {
