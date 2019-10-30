@@ -3,12 +3,16 @@ import { CommonModule } from "@angular/common";
 import { RouterModule } from '@angular/router';
 
 import { HomeComponent } from "./home.component";
+import { MatListModule, MatSidenavModule } from '@angular/material';
 
 @NgModule({
 	declarations: [HomeComponent],
 	imports: [
 		CommonModule,
 		RouterModule.forChild([{ path: "", component: HomeComponent }]),
+
+		MatListModule,
+		MatSidenavModule,
 	]
 })
 export class HomeModule { }
