@@ -77,34 +77,11 @@
 		</div>
 
 		<div *ngIf="currActiveList === 'Credit'" class="mt-2">
-			<mat-tab-group>
-				<mat-tab label="All Pending">
-					<div class="p">Pending</div>
-				</mat-tab>
-				<mat-tab label="This Statement">
-					<div class="p">This Statement</div>
-				</mat-tab>
-				<mat-tab label="Next Statement">
-					<div class="p">Next Statement</div>
-				</mat-tab>
-				<mat-tab label="Installments">
-					<div class="p">Installments</div>
-				</mat-tab>
-			</mat-tab-group>
+			<app-credit-tab></app-credit-tab>
 		</div>
 
 		<div *ngIf="currActiveList === 'Cash'" class="mt-2">
-			<mat-tab-group>
-				<mat-tab label="This Month">
-					<div class="p">This Month</div>
-				</mat-tab>
-				<mat-tab label="Last Month">
-					<div class="p">Last Month</div>
-				</mat-tab>
-				<mat-tab label="All Spendings">
-					<div class="p">Next Statement</div>
-				</mat-tab>
-			</mat-tab-group>
+			<app-cash-tab></app-cash-tab>
 		</div>
 
 	</mat-sidenav-content>
