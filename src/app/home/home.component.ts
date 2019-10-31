@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { MatSnackBar } from "@angular/material";
 import { addMonths, format, setDate } from "date-fns"
 
-import { AppService } from "@app/app.service";
+import { AppService, Settings } from "@app/app.service";
 
 @Component({
 	selector: "app-home",
@@ -44,6 +44,13 @@ export class HomeComponent implements OnInit {
 
 		this.service.auth()
 			.then((isAuth) => {
+				this.service.retrieveSettings()
+					.then((data: Settings) => {
+						this.processCurrency(data.currency);
+						this.processDue(data.due);
+						this.processStatement(data.statement);
+					});
+
 				if (!isAuth) {
 					this.router.navigateByUrl("/login")
 				}
@@ -54,27 +61,9 @@ export class HomeComponent implements OnInit {
 		if (this.settingsCreditForm.valid) {
 			const { currency, due, statement } = this.settingsCreditForm.value;
 
-			this.settings.currency = (currency) ? `${currency} ` : "";
-
-			if (due) {
-				const date = setDate(new Date(), due);
-
-				if (date < new Date()) { addMonths(date, 1); }
-
-				this.settings.credit.due = format(date, "EEEE MMM dd, yyyy");
-			} else {
-				this.settings.credit.due = null;
-			}
-
-			if (statement) {
-				const date = setDate(new Date(), statement);
-
-				if (date < new Date()) { addMonths(date, 1); }
-
-				this.settings.credit.statement = format(date, "EEEE MMM dd, yyyy");
-			} else {
-				this.settings.credit.statement = null;
-			}
+			this.processCurrency(currency)
+			this.processDue(due);
+			this.processStatement(statement);
 
 			this.isSettingsOpen = false;
 			this.snackbar.open("Settings saved", "Close", { duration: 2000 });
@@ -84,6 +73,34 @@ export class HomeComponent implements OnInit {
 	setActiveList(list: string) {
 		this.currActiveList = list;
 		this.isSettingsOpen = false;
+	}
+
+	private processCurrency(currency: string) {
+		this.settings.currency = (currency) ? `${currency} ` : "";
+	}
+
+	private processDue(due: number) {
+		if (due) {
+			const date = setDate(new Date(), due);
+
+			if (date < new Date()) { addMonths(date, 1); }
+
+			this.settings.credit.due = format(date, "EEEE MMM dd, yyyy");
+		} else {
+			this.settings.credit.due = null;
+		}
+	}
+
+	private processStatement(statement: number) {
+		if (statement) {
+			const date = setDate(new Date(), statement);
+
+			if (date < new Date()) { addMonths(date, 1); }
+
+			this.settings.credit.statement = format(date, "EEEE MMM dd, yyyy");
+		} else {
+			this.settings.credit.statement = null;
+		}
 	}
 
 }

@@ -48,4 +48,24 @@ export class AppService {
 		});
 	}
 
+	retrieveSettings(): Promise<Settings> {
+		return new Promise((resolve, reject) => {
+			firebase.firestore()
+				.collection("settings")
+				.where("owner", "==", firebase.auth().currentUser.email)
+				.get()
+				.then((doc: any) => {
+					if (!doc.empty) { resolve(doc.docs[0].data()); }
+					else { resolve({}); }
+				}).catch((err) => reject(err));
+		});
+	}
+
+}
+
+export interface Settings {
+	currency?: string,
+	due?: number,
+	owner?: string,
+	statement?: number,
 }
