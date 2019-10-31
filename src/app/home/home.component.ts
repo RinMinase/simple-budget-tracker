@@ -13,6 +13,8 @@ import { AppService, Settings } from "@app/app.service";
 })
 export class HomeComponent implements OnInit {
 
+	flagDisableRetrieve = true;
+
 	settingsCreditForm: FormGroup;
 	isSidenavOpen: boolean = true;
 	currActiveList: string = "Credit";
@@ -44,17 +46,19 @@ export class HomeComponent implements OnInit {
 
 		this.service.auth()
 			.then((isAuth) => {
-				this.service.retrieveSettings()
-					.then((data: Settings) => {
-						this.processCurrency(data.currency);
-						this.processDue(data.due);
-						this.processStatement(data.statement);
-						this.settingsCreditForm.setValue({
-							currency: data.currency,
-							due: data.due,
-							statement: data.statement,
+				if (!this.service.isDev || !this.flagDisableRetrieve) {
+					this.service.retrieveSettings()
+						.then((data: Settings) => {
+							this.processCurrency(data.currency);
+							this.processDue(data.due);
+							this.processStatement(data.statement);
+							this.settingsCreditForm.setValue({
+								currency: data.currency,
+								due: data.due,
+								statement: data.statement,
+							});
 						});
-					});
+				}
 
 				if (!isAuth) {
 					this.router.navigateByUrl("/login")
