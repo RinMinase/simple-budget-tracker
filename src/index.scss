@@ -39,3 +39,27 @@ body { margin: 0; }
 .c-pointer {
 	cursor: pointer;
 }
+
+.ml { margin-left: .75rem !important; }
+.ml-1 { margin-left: 1rem !important; }
+.ml-2 { margin-left: 1.5rem !important; }
+
+.mr { margin-right: .75rem !important; }
+.mr-1 { margin-right: 1rem !important; }
+.mr-2 { margin-right: 1.5rem !important; }
+
+.mt { margin-top: .75rem !important; }
+.mt-1 { margin-top: 1rem !important; }
+.mt-2 { margin-top: 1.5rem !important; }
+
+.mb { margin-bottom: .75rem !important; }
+.mb-1 { margin-bottom: 1rem !important; }
+.mb-2 { margin-bottom: 1.5rem !important; }
+
+.mx { margin-left: .75rem !important; margin-right: .75rem !important; }
+.mx-1 { margin-left: 1rem !important; margin-right: 1rem !important; }
+.mx-2 { margin-left: 1.5rem !important; margin-right: 1.5rem !important; }
+
+.my { margin-top: .75rem !important; margin-bottom: .75rem !important; }
+.my-1 { margin-top: 1rem !important; margin-bottom: 1rem !important; }
+.my-2 { margin-top: 1.5rem !important; margin-bottom: 1.5rem !important; }
