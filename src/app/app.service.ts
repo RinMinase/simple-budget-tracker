@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import { PlatformLocation } from "@angular/common";
 import { BehaviorSubject } from "rxjs";
 
 import * as firebase from "firebase/app";
@@ -14,7 +15,9 @@ export class AppService {
 	private isSidenavOpen = new BehaviorSubject(true);
 	currIsSidenavOpen = this.isSidenavOpen.asObservable();
 
-	constructor() { }
+	isDev: boolean = (this.platformLocation as any).location.origin.includes("local");
+
+	constructor(private platformLocation: PlatformLocation) { }
 
 	/**
 	 * Observable Subjects
