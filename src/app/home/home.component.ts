@@ -1,9 +1,10 @@
 import { Component, OnInit } from "@angular/core";
-import { Router } from '@angular/router';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { MatSnackBar } from '@angular/material';
+import { Router } from "@angular/router";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { MatSnackBar } from "@angular/material";
+import { addMonths, format, setDate } from "date-fns"
 
-import { AppService } from '@app/app.service';
+import { AppService } from "@app/app.service";
 
 @Component({
 	selector: "app-home",
@@ -15,16 +16,15 @@ export class HomeComponent implements OnInit {
 	settingsCreditForm: FormGroup;
 	isSidenavOpen: boolean = true;
 	currActiveList: string = "Credit";
-	isSettingsOpen: boolean = true;
+	isSettingsOpen: boolean = false;
 
 	settings = {
 		currency: "PHP ",
 		credit: {
-			due: -1,
-			statement: -1
+			due: null,
+			statement: null
 		}
 	}
-
 
 	constructor(
 		private formBuilder: FormBuilder,
@@ -36,8 +36,8 @@ export class HomeComponent implements OnInit {
 	ngOnInit() {
 		this.settingsCreditForm = this.formBuilder.group({
 			currency: ["PHP", [Validators.maxLength(5)]],
-			due: [1, [Validators.required, Validators.min(1), Validators.max(30)]],
-			statement: [1, [Validators.required, Validators.min(1), Validators.max(30)]]
+			due: ["", [Validators.min(1), Validators.max(30)]],
+			statement: ["", [Validators.min(1), Validators.max(30)]]
 		});
 
 		this.service.currIsSidenavOpen.subscribe((state) => this.isSidenavOpen = state);
@@ -52,11 +52,31 @@ export class HomeComponent implements OnInit {
 
 	saveCreditSettings() {
 		if (this.settingsCreditForm.valid) {
-			const { currency } = this.settingsCreditForm.value;
+			const { currency, due, statement } = this.settingsCreditForm.value;
 
 			this.settings.currency = (currency) ? `${currency} ` : "";
-			this.isSettingsOpen = false;
 
+			if (due) {
+				const date = setDate(new Date(), due);
+
+				if (date < new Date()) { addMonths(date, 1); }
+
+				this.settings.credit.due = format(date, "EEEE MMM dd, yyyy");
+			} else {
+				this.settings.credit.due = null;
+			}
+
+			if (statement) {
+				const date = setDate(new Date(), statement);
+
+				if (date < new Date()) { addMonths(date, 1); }
+
+				this.settings.credit.statement = format(date, "EEEE MMM dd, yyyy");
+			} else {
+				this.settings.credit.statement = null;
+			}
+
+			this.isSettingsOpen = false;
 			this.snackbar.open("Settings saved", "Close", { duration: 2000 });
 		}
 	}
