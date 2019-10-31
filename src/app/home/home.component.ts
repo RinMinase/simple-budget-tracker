@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
 
 	isSidenavOpen: boolean = true;
 	currActiveList: string = "Credit";
+	isSettingsOpen: boolean = false;
 
 	constructor(
 		private router: Router,
@@ -31,6 +32,7 @@ export class HomeComponent implements OnInit {
 
 	setActiveList(list: string) {
 		this.currActiveList = list;
+		this.isSettingsOpen = false;
 	}
 
 }

@@ -11,17 +11,26 @@
 		</mat-list>
 	</mat-sidenav>
 	<mat-sidenav-content class="home-content">
+
 		<div>
 			<h3>{{currActiveList}}</h3>
 			<button mat-raised-button color="accent">
 				<i class="material-icons">edit</i>
-				<span class="ml mr">Add</span>
+				<span class="mx">Add</span>
 			</button>
-			<button mat-raised-button color="accent" class="ml">
+			<button mat-raised-button
+				color="accent"
+				class="ml"
+				(click)="isSettingsOpen = !isSettingsOpen">
 				<i class="material-icons">settings</i>
-				<span class="ml mr">{{currActiveList}} Settings</span>
+				<span class="mx">{{currActiveList}} Settings</span>
 			</button>
 		</div>
+
+		<div *ngIf="isSettingsOpen" class="mt-1">
+			settings
+		</div>
+
 		<div *ngIf="currActiveList === 'Credit'" class="mt-1">
 			<p class="mb">Next Statement : <span>[date]</span></p>
 			<p class="mt">
@@ -35,5 +44,6 @@
 				<span>[currency]</span><span>[amount]</span> on <span>[date]</span>
 			</p>
 		</div>
+
 	</mat-sidenav-content>
 </mat-sidenav-container>
