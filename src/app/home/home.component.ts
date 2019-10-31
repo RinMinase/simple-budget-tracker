@@ -91,9 +91,7 @@ export class HomeComponent implements OnInit {
 	private processDue(due: number) {
 		if (due) {
 			const date = setDate(new Date(), due);
-
 			if (date < new Date()) { addMonths(date, 1); }
-
 			this.settings.credit.due = format(date, "EEEE MMM dd, yyyy");
 		} else {
 			this.settings.credit.due = null;
@@ -103,9 +101,7 @@ export class HomeComponent implements OnInit {
 	private processStatement(statement: number) {
 		if (statement) {
 			const date = setDate(new Date(), statement);
-
 			if (date < new Date()) { addMonths(date, 1); }
-
 			this.settings.credit.statement = format(date, "EEEE MMM dd, yyyy");
 		} else {
 			this.settings.credit.statement = null;

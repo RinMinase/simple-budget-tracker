@@ -1,8 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input } from "@angular/core";
 
 @Component({
-	selector: 'app-cash-details',
-	templateUrl: './cash-details.component.html',
+	selector: "app-cash-details",
+	templateUrl: "./cash-details.component.html",
 })
 export class CashDetailsComponent implements OnInit {
 

@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { RouterModule } from '@angular/router';
+import { RouterModule } from "@angular/router";
+import { ReactiveFormsModule } from "@angular/forms";
 
 import {
 	MatButtonModule,
@@ -10,14 +11,13 @@ import {
 	MatSidenavModule,
 	MatSnackBarModule,
 	MatTabsModule,
-} from '@angular/material';
-import { ReactiveFormsModule } from '@angular/forms';
+} from "@angular/material";
 
 import { HomeComponent } from "./home.component";
-import { CashDetailsComponent } from './cash-details/cash-details.component';
-import { CashTabComponent } from './cash-tab/cash-tab.component';
-import { CreditDetailsComponent } from './credit-details/credit-details.component';
-import { CreditTabComponent } from './credit-tab/credit-tab.component';
+import { CashDetailsComponent } from "./cash-details/cash-details.component";
+import { CashTabComponent } from "./cash-tab/cash-tab.component";
+import { CreditDetailsComponent } from "./credit-details/credit-details.component";
+import { CreditTabComponent } from "./credit-tab/credit-tab.component";
 
 @NgModule({
 	declarations: [
