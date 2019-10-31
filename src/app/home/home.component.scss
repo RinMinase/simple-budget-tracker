@@ -7,11 +7,19 @@
 }
 
 .home-content {
-	padding: 22px 20px;
+	padding: 0 20px;
 }
 
 .active-list-item {
 	background-color: #F44336 !important;
 	color: #FFF;
 	font-weight: bold;
+}
+
+.ml {
+	margin-left: .75rem;
+}
+
+.mr {
+	margin-right: .75rem;
 }

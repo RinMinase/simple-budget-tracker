@@ -11,6 +11,7 @@ import { AppService } from '@app/app.service';
 export class HomeComponent implements OnInit {
 
 	isSidenavOpen: boolean = true;
+	currActiveList: string = "Credit";
 
 	constructor(
 		private router: Router,
@@ -26,6 +27,10 @@ export class HomeComponent implements OnInit {
 					this.router.navigateByUrl("/login")
 				}
 			});
+	}
+
+	setActiveList(list: string) {
+		this.currActiveList = list;
 	}
 
 }
