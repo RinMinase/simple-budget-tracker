@@ -29,5 +29,11 @@
 				<span>[currency]</span><span>[amount]</span> on <span>[date]</span>
 			</p>
 		</div>
+		<div *ngIf="currActiveList === 'Cash'" class="mt-1">
+			<p>
+				<span>Total for this <span>[time]</span> : </span>
+				<span>[currency]</span><span>[amount]</span> on <span>[date]</span>
+			</p>
+		</div>
 	</mat-sidenav-content>
 </mat-sidenav-container>
