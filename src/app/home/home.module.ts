@@ -3,7 +3,7 @@ import { CommonModule } from "@angular/common";
 import { RouterModule } from '@angular/router';
 
 import { HomeComponent } from "./home.component";
-import { MatListModule, MatSidenavModule } from '@angular/material';
+import { MatListModule, MatSidenavModule, MatButtonModule } from '@angular/material';
 
 @NgModule({
 	declarations: [HomeComponent],
@@ -11,6 +11,7 @@ import { MatListModule, MatSidenavModule } from '@angular/material';
 		CommonModule,
 		RouterModule.forChild([{ path: "", component: HomeComponent }]),
 
+		MatButtonModule,
 		MatListModule,
 		MatSidenavModule,
 	]

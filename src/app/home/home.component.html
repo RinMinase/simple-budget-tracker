@@ -13,6 +13,14 @@
 	<mat-sidenav-content class="home-content">
 		<div>
 			<h3>{{currActiveList}}</h3>
+			<button mat-raised-button color="accent">
+				<i class="material-icons">edit</i>
+				<span class="ml mr">Add</span>
+			</button>
+			<button mat-raised-button color="accent" class="ml">
+				<i class="material-icons">settings</i>
+				<span class="ml mr">{{currActiveList}} Settings</span>
+			</button>
 		</div>
 	</mat-sidenav-content>
 </mat-sidenav-container>
