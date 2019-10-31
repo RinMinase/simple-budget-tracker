@@ -10,6 +10,7 @@ import {
 	MatListModule,
 	MatSidenavModule,
 	MatSnackBarModule,
+	MatTabsModule,
 } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -26,6 +27,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 		MatListModule,
 		MatSidenavModule,
 		MatSnackBarModule,
+		MatTabsModule,
 	]
 })
 export class HomeModule { }

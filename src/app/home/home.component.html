@@ -76,5 +76,14 @@
 			</p>
 		</div>
 
+		<div *ngIf="currActiveList === 'Credit'" class="mt-2">
+			<mat-tab-group>
+				<mat-tab label="All Pending">Pending</mat-tab>
+				<mat-tab label="This Statement">This Statement</mat-tab>
+				<mat-tab label="Next Statement">Next Statement</mat-tab>
+				<mat-tab label="Installments">Installments</mat-tab>
+			</mat-tab-group>
+		</div>
+
 	</mat-sidenav-content>
 </mat-sidenav-container>
