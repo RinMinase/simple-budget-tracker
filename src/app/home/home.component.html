@@ -22,5 +22,8 @@
 				<span class="ml mr">{{currActiveList}} Settings</span>
 			</button>
 		</div>
+		<div *ngIf="currActiveList === 'Credit'" class="mt-1">
+			{{currActiveList}}
+		</div>
 	</mat-sidenav-content>
 </mat-sidenav-container>
