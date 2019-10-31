@@ -85,5 +85,13 @@
 			</mat-tab-group>
 		</div>
 
+		<div *ngIf="currActiveList === 'Cash'" class="mt-2">
+			<mat-tab-group>
+				<mat-tab label="This Month">This Month</mat-tab>
+				<mat-tab label="Last Month">Last Month</mat-tab>
+				<mat-tab label="All Spendings">Next Statement</mat-tab>
+			</mat-tab-group>
+		</div>
+
 	</mat-sidenav-content>
 </mat-sidenav-container>
