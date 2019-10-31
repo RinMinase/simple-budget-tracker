@@ -24,6 +24,16 @@ $spinner-accent: #F44336;
 * { font-family: "Segoe UI", Tahoma, Verdana, sans-serif; }
 body { margin: 0; }
 
+input[type=number] {
+	-moz-appearance:textfield;
+
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+}
+
 .container {
 	width: 750px;
 	margin: 20px auto;
