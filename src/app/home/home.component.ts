@@ -49,6 +49,11 @@ export class HomeComponent implements OnInit {
 						this.processCurrency(data.currency);
 						this.processDue(data.due);
 						this.processStatement(data.statement);
+						this.settingsCreditForm.setValue({
+							currency: data.currency,
+							due: data.due,
+							statement: data.statement,
+						});
 					});
 
 				if (!isAuth) {
