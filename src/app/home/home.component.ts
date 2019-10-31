@@ -9,7 +9,7 @@ import { AppService, Settings } from "@app/app.service";
 @Component({
 	selector: "app-home",
 	templateUrl: "./home.component.html",
-	styleUrls: ["./home.component.scss"]
+	styleUrls: ["./home.component.scss"],
 })
 export class HomeComponent implements OnInit {
 
