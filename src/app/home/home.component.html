@@ -23,7 +23,11 @@
 			</button>
 		</div>
 		<div *ngIf="currActiveList === 'Credit'" class="mt-1">
-			{{currActiveList}}
+			<p class="mb">Next Statement : <span>[date]</span></p>
+			<p class="mt">
+				<span>Current Due : </span>
+				<span>[currency]</span><span>[amount]</span> on <span>[date]</span>
+			</p>
 		</div>
 	</mat-sidenav-content>
 </mat-sidenav-container>
