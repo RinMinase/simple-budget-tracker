@@ -14,14 +14,18 @@ import {
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { HomeComponent } from "./home.component";
-import { CreditTabComponent } from './credit-tab/credit-tab.component';
+import { CashDetailsComponent } from './cash-details/cash-details.component';
 import { CashTabComponent } from './cash-tab/cash-tab.component';
+import { CreditDetailsComponent } from './credit-details/credit-details.component';
+import { CreditTabComponent } from './credit-tab/credit-tab.component';
 
 @NgModule({
 	declarations: [
 		HomeComponent,
+		CashDetailsComponent,
+		CashTabComponent,
+		CreditDetailsComponent,
 		CreditTabComponent,
-		CashTabComponent
 	],
 	imports: [
 		CommonModule,

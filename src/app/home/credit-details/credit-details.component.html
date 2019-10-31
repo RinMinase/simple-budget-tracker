@@ -1,0 +1,12 @@
+<p class="mb">
+	<span>Next Statement : </span>
+	<span *ngIf="!statement">Not set</span>
+	<span>{{statement}}</span>
+</p>
+<p class="mt">
+	<span>Current Due : </span>
+	<span>{{currency}}</span>
+	<span>[amount]</span>
+	<span *ngIf="due">&nbsp;on&nbsp;</span>
+	<span>{{due}}</span>
+</p>
