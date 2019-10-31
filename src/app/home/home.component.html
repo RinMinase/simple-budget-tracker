@@ -56,24 +56,12 @@
 		</div>
 
 		<div *ngIf="currActiveList === 'Credit'" class="mt-1">
-			<p class="mb">
-				<span>Next Statement : </span>
-				<span *ngIf="!settings.credit.statement">Not set</span>
-				<span>{{settings.credit.statement}}</span>
-			</p>
-			<p class="mt">
-				<span>Current Due : </span>
-				<span>{{settings.currency}}</span>
-				<span>[amount]</span>
-				<span *ngIf="settings.credit.due">&nbsp;on&nbsp;</span>
-				<span>{{settings.credit.due}}</span>
-			</p>
+			<app-credit-details [currency]="settings.currency"
+				[due]="settings.credit.due"
+				[statement]="settings.credit.statement"></app-credit-details>
 		</div>
 		<div *ngIf="currActiveList === 'Cash'" class="mt-1">
-			<p>
-				<span>Total for this <span>[time]</span> : </span>
-				<span>{{settings.currency}}</span><span>[amount]</span> on <span>[date]</span>
-			</p>
+			<app-cash-details [currency]="settings.currency"></app-cash-details>
 		</div>
 
 		<div *ngIf="currActiveList === 'Credit'" class="mt-2">
