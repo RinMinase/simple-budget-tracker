@@ -28,20 +28,44 @@
 		</div>
 
 		<div *ngIf="isSettingsOpen" class="mt-1">
-			settings
+			<form [formGroup]="settingsCreditForm" (ngSubmit)="saveCreditSettings()">
+				<mat-form-field class="currency-field mr">
+					<input matInput placeholder="Currency" formControlName="currency">
+				</mat-form-field>
+
+				<mat-form-field class="credit-day-field number-field mr">
+					<input matInput
+						type="number"
+						min="1" max="31"
+						placeholder="Due Day"
+						formControlName="due">
+				</mat-form-field>
+
+				<mat-form-field class="credit-day-field number-field">
+					<input matInput
+						type="number"
+						min="1" max="31"
+						placeholder="Statement Day"
+						formControlName="statement">
+				</mat-form-field>
+
+				<div class="submit-container">
+					<button mat-raised-button color="accent" class="submit-button">Save</button>
+				</div>
+			</form>
 		</div>
 
 		<div *ngIf="currActiveList === 'Credit'" class="mt-1">
 			<p class="mb">Next Statement : <span>[date]</span></p>
 			<p class="mt">
 				<span>Current Due : </span>
-				<span>[currency]</span><span>[amount]</span> on <span>[date]</span>
+				<span>{{settings.currency}}</span><span>[amount]</span> on <span>[date]</span>
 			</p>
 		</div>
 		<div *ngIf="currActiveList === 'Cash'" class="mt-1">
 			<p>
 				<span>Total for this <span>[time]</span> : </span>
-				<span>[currency]</span><span>[amount]</span> on <span>[date]</span>
+				<span>{{settings.currency}}</span><span>[amount]</span> on <span>[date]</span>
 			</p>
 		</div>
 
