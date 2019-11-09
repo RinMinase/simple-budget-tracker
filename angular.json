@@ -30,17 +30,17 @@
             "assets": [
               {
                 "glob": "favicon.ico",
-                "input": "src/assets/",
+                "input": "assets/",
                 "output": "/assets"
               },
               {
                 "glob": "robots.txt",
-                "input": "src/assets/",
+                "input": "assets/",
                 "output": "/"
               },
               {
                 "glob": "_redirects",
-                "input": "src/assets/",
+                "input": "assets/",
                 "output": "/"
               }
             ]
