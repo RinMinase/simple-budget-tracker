@@ -10,7 +10,6 @@
       "prefix": "app",
       "schematics": {
         "@schematics/angular:component": { "style": "scss", "skipTests": true },
-        "@schematics/angular:directive": { "skipTests": true },
         "@schematics/angular:module": { "skipTests": true },
         "@schematics/angular:service": { "skipTests": true }
       },
@@ -27,23 +26,19 @@
             "extractLicenses": false,
             "styles": [ "src/index.scss" ],
             "scripts": [],
-            "assets": [
-              {
-                "glob": "favicon.ico",
-                "input": "assets/",
-                "output": "/assets"
-              },
-              {
-                "glob": "robots.txt",
-                "input": "assets/",
-                "output": "/"
-              },
-              {
-                "glob": "_redirects",
-                "input": "assets/",
-                "output": "/"
-              }
-            ]
+            "assets": [{
+              "glob": "favicon.ico",
+              "input": "assets/",
+              "output": "/assets"
+            }, {
+              "glob": "robots.txt",
+              "input": "assets/",
+              "output": "/"
+            }, {
+              "glob": "_redirects",
+              "input": "assets/",
+              "output": "/"
+            }]
           },
           "configurations": {
             "production": {
