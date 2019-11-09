@@ -46,14 +46,10 @@ export class LoginComponent implements OnInit {
 				case "auth/user-not-found":
 				case "auth/argument-error":
 				case "auth/wrong-password":
-					this.snackbar.open("Invalid username or password.", "Close", {
-						duration: 2000
-					});
+					this.snackbar.open("Invalid username or password.", "Close");
 					break;
 				default:
-					this.snackbar.open("An unkown error has occurred.", "Close", {
-						duration: 2000
-					});
+					this.snackbar.open("An unkown error has occurred.", "Close");
 			}
 		}
 	}

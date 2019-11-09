@@ -72,7 +72,7 @@ export class HomeComponent implements OnInit {
 			this.processStatement(statement);
 
 			this.isSettingsOpen = false;
-			this.snackbar.open("Settings saved", "Close", { duration: 2000 });
+			this.snackbar.open("Settings saved", "Close");
 		}
 	}
 
