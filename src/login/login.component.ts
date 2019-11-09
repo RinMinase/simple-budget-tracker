@@ -30,32 +30,32 @@ export class LoginComponent implements OnInit {
 		});
 	}
 
-	authenticate() {
+	async authenticate() {
 		this.loading = true;
 
 		const { email, password } = this.loginForm.value;
-		this.service.login(email, password)
-			.then(() => {
-				this.service.setLoggedIn(true);
-				this.router.navigateByUrl("/");
-			}).catch((error: any) => {
-				this.loading = false;
+		try {
+			await this.service.login(email, password);
+			this.service.setLoggedIn(true);
+			this.router.navigateByUrl("/");
+		} catch (error) {
+			this.loading = false;
 
-				switch (error.code) {
-					case "auth/invalid-email":
-					case "auth/user-not-found":
-					case "auth/argument-error":
-					case "auth/wrong-password":
-						this.snackbar.open("Invalid username or password.", "Close", {
-							duration: 2000
-						});
-						break;
-					default:
-						this.snackbar.open("An unkown error has occurred.", "Close", {
-							duration: 2000
-						});
-				}
-			});
+			switch (error.code) {
+				case "auth/invalid-email":
+				case "auth/user-not-found":
+				case "auth/argument-error":
+				case "auth/wrong-password":
+					this.snackbar.open("Invalid username or password.", "Close", {
+						duration: 2000
+					});
+					break;
+				default:
+					this.snackbar.open("An unkown error has occurred.", "Close", {
+						duration: 2000
+					});
+			}
+		}
 	}
 
 }
