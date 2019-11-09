@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { MatSnackBar } from "@angular/material";
 import { addMonths, format, setDate } from "date-fns"
 
-import { AppService, Settings } from "@app/app.service";
+import { AppService, Settings } from "@core/app.service";
 
 @Component({
 	selector: "app-home",

@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup } from "@angular/forms";
 
 import { MatSnackBar } from "@angular/material";
 
-import { AppService } from "@app/app.service.ts";
+import { AppService } from "@core/app.service.ts";
 
 @Component({
 	selector: "app-login",
