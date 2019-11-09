@@ -53,6 +53,25 @@ Schematics
 
 ### Project Structure
 
+#### Directory Structure
+    .
+    ├── dist/                            # Compiled production code
+    ├── assets/                          # Project assets
+    ├── src/                             # Project source code
+    │   ├── core/                        # Project-wide reusable classes
+    │   ├── <module>/                    # Project modules and components
+    │   │   ├── <name>.component.html    # Component template
+    │   │   ├── <name>.component.scss    # Component stylesheet
+    │   │   ├── <name>.component.ts      # Module component
+    │   │   └── <name>.module.ts         # Module
+    │   ├── app.module.ts                # Main project module and component
+    │   ├── index.html                   # Main HTML file
+    │   ├── index.scss                   # Main Stylesheet (SCSS) file
+    │   └── index.ts                     # Main TypeScript file
+    ├── angular.json                     # Angular CLI configuration
+    ├── tsconfig.json                    # Main TypeScript configuration file
+    └── ...                              # Other project files
+
 ### Project tasks
 
 Task automation is based on [Yarn scripts](https://yarnpkg.com/lang/en/docs/cli/run/) or [NPM scripts](https://docs.npmjs.com/misc/scripts).
