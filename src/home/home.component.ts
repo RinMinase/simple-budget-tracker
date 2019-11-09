@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit {
 		private service: AppService,
 	) { }
 
-	ngOnInit() {
+	async ngOnInit() {
 		this.settingsCreditForm = this.formBuilder.group({
 			currency: ["PHP", [Validators.maxLength(5)]],
 			due: ["", [Validators.min(1), Validators.max(30)]],
@@ -44,26 +44,23 @@ export class HomeComponent implements OnInit {
 
 		this.service.currIsSidenavOpen.subscribe((state) => this.isSidenavOpen = state);
 
-		this.service.auth()
-			.then((isAuth) => {
-				if (isAuth) {
-					if (!this.service.isDev || !this.flagDisableRetrieve) {
-						this.service.retrieveSettings()
-							.then((data: Settings) => {
-								this.processCurrency(data.currency);
-								this.processDue(data.due);
-								this.processStatement(data.statement);
-								this.settingsCreditForm.setValue({
-									currency: data.currency,
-									due: data.due,
-									statement: data.statement,
-								});
-							});
-					}
-				} else {
-					this.router.navigateByUrl("/login")
-				}
-			});
+		const isAuth = await this.service.auth();
+		if (isAuth) {
+			if (!this.service.isDev || !this.flagDisableRetrieve) {
+				const data: Settings = await this.service.retrieveSettings();
+
+				this.processCurrency(data.currency);
+				this.processDue(data.due);
+				this.processStatement(data.statement);
+				this.settingsCreditForm.setValue({
+					currency: data.currency,
+					due: data.due,
+					statement: data.statement,
+				});
+			}
+		} else {
+			this.router.navigateByUrl("/login")
+		}
 	}
 
 	saveCreditSettings() {
