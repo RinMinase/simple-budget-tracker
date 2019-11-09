@@ -46,21 +46,21 @@ export class HomeComponent implements OnInit {
 
 		this.service.auth()
 			.then((isAuth) => {
-				if (!this.service.isDev || !this.flagDisableRetrieve) {
-					this.service.retrieveSettings()
-						.then((data: Settings) => {
-							this.processCurrency(data.currency);
-							this.processDue(data.due);
-							this.processStatement(data.statement);
-							this.settingsCreditForm.setValue({
-								currency: data.currency,
-								due: data.due,
-								statement: data.statement,
+				if (isAuth) {
+					if (!this.service.isDev || !this.flagDisableRetrieve) {
+						this.service.retrieveSettings()
+							.then((data: Settings) => {
+								this.processCurrency(data.currency);
+								this.processDue(data.due);
+								this.processStatement(data.statement);
+								this.settingsCreditForm.setValue({
+									currency: data.currency,
+									due: data.due,
+									statement: data.statement,
+								});
 							});
-						});
-				}
-
-				if (!isAuth) {
+					}
+				} else {
 					this.router.navigateByUrl("/login")
 				}
 			});
