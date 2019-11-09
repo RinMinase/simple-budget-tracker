@@ -26,12 +26,11 @@ export class NavComponent implements OnInit {
 		this.router.navigateByUrl("/")
 	}
 
-	navigateUser() {
+	async navigateUser() {
 		if (this.isLoggedIn) {
-			this.service.logout().then(() => {
-				this.service.setLoggedIn(false);
-				this.router.navigateByUrl("/login")
-			});
+			await this.service.logout();
+			this.service.setLoggedIn(false);
+			this.router.navigateByUrl("/login")
 		} else {
 			this.router.navigateByUrl("/login")
 		}
