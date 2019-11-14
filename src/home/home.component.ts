@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
 	isSidenavOpen: boolean = true;
 	currActiveList: string = "Credit";
 	isSettingsOpen: boolean = false;
+	isMobile: boolean = window.innerWidth < 576;
 
 	settings = {
 		currency: "PHP ",
@@ -79,6 +80,10 @@ export class HomeComponent implements OnInit {
 	setActiveList(list: string) {
 		this.currActiveList = list;
 		this.isSettingsOpen = false;
+
+		if (this.isMobile) {
+			this.service.setSidenavOpen(false);
+		}
 	}
 
 	private processCurrency(currency: string) {

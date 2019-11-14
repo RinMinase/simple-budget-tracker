@@ -10,7 +10,7 @@
 			<!-- <mat-list-item>Loans</mat-list-item> -->
 		</mat-list>
 	</mat-sidenav>
-	<mat-sidenav-content class="home-content" *ngIf="!isSidenavOpen">
+	<mat-sidenav-content class="home-content" *ngIf="!(isSidenavOpen && isMobile)">
 
 		<div>
 			<h3>{{currActiveList}}</h3>
