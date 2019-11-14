@@ -5,6 +5,7 @@ import { ReactiveFormsModule } from "@angular/forms";
 
 import {
 	MatButtonModule,
+	MatDividerModule,
 	MatFormFieldModule,
 	MatInputModule,
 	MatListModule,
@@ -33,6 +34,7 @@ import { CreditTabComponent } from "./credit-tab/credit-tab.component";
 		ReactiveFormsModule,
 
 		MatButtonModule,
+		MatDividerModule,
 		MatFormFieldModule,
 		MatInputModule,
 		MatListModule,

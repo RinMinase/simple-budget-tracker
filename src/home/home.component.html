@@ -3,11 +3,22 @@
 		<mat-list>
 			<mat-list-item (click)="setActiveList('Credit')"
 				[ngClass]="{'active-list-item': currActiveList === 'Credit'}"
-				class="c-pointer">Credit</mat-list-item>
+				class="c-pointer">
+				<i class="material-icons mr">credit_card</i>
+				<span>Credit</span>
+			</mat-list-item>
 			<mat-list-item (click)="setActiveList('Cash')"
 				[ngClass]="{'active-list-item': currActiveList === 'Cash'}"
-				class="c-pointer">Cash</mat-list-item>
+				class="c-pointer">
+				<i class="material-icons mr">attach_money</i>
+				<span>Cash</span>
+			</mat-list-item>
 			<!-- <mat-list-item>Loans</mat-list-item> -->
+			<mat-divider class="logout-divider"></mat-divider>
+			<mat-list-item (click)="logout()" class="c-pointer logout-menu">
+				<i class="material-icons mr">exit_to_app</i>
+				<span>Logout</span>
+			</mat-list-item>
 		</mat-list>
 	</mat-sidenav>
 	<mat-sidenav-content class="home-content" *ngIf="!(isSidenavOpen && isMobile)">

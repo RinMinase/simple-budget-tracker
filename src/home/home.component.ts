@@ -64,6 +64,12 @@ export class HomeComponent implements OnInit {
 		}
 	}
 
+	async logout() {
+		await this.service.logout();
+		this.service.setLoggedIn(false);
+		this.router.navigateByUrl("/login");
+	}
+
 	saveCreditSettings() {
 		if (this.settingsCreditForm.valid) {
 			const { currency, due, statement } = this.settingsCreditForm.value;

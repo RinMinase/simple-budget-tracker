@@ -26,15 +26,15 @@ export class NavComponent implements OnInit {
 		this.router.navigateByUrl("/")
 	}
 
-	async navigateUser() {
-		if (this.isLoggedIn) {
-			await this.service.logout();
-			this.service.setLoggedIn(false);
-			this.router.navigateByUrl("/login")
-		} else {
-			this.router.navigateByUrl("/login")
-		}
-	}
+	// async navigateUser() {
+	// 	if (this.isLoggedIn) {
+	// 		await this.service.logout();
+	// 		this.service.setLoggedIn(false);
+	// 		this.router.navigateByUrl("/login")
+	// 	} else {
+	// 		this.router.navigateByUrl("/login")
+	// 	}
+	// }
 
 	toggleSidenav() {
 		this.service.setSidenavOpen(!this.isSidenavOpen);
