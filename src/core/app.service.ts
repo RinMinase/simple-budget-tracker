@@ -17,7 +17,11 @@ export class AppService {
 
 	isDev: boolean = (this.platformLocation as any).location.origin.includes("local");
 
-	constructor(private platformLocation: PlatformLocation) { }
+	constructor(private platformLocation: PlatformLocation) {
+		if (window.innerWidth < 576) {
+			this.isSidenavOpen.next(false);
+		}
+	}
 
 	/**
 	 * Observable Subjects
