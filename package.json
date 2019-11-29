@@ -37,7 +37,6 @@
     "@angular/compiler": "^9.0.0-rc.4",
     "@angular/compiler-cli": "^9.0.0-rc.4",
     "@angular/platform-browser-dynamic": "^9.0.0-rc.4",
-    "@types/node": "^12.12.14",
     "tslib": "^1.10.0",
     "typescript": "^3.7.2"
   }
