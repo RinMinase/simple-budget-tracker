@@ -13,7 +13,7 @@
   "scripts": {
     "start": "ng serve",
     "build": "ng build --prod",
-    "deploy": "ng build --prod --no-progress",
+    "deploy": "ng build --prod --no-progress"
   },
   "dependencies": {
     "@angular/animations": "^9.0.0-rc.4",
