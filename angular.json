@@ -21,7 +21,7 @@
             "index": "src/index.html",
             "main": "src/index.ts",
             "tsConfig": "tsconfig.json",
-            "aot": false,
+            "aot": true,
             "extractCss": true,
             "extractLicenses": false,
             "styles": [ "src/index.scss" ],
@@ -46,7 +46,6 @@
               "outputHashing": "all",
               "sourceMap": false,
               "namedChunks": false,
-              "aot": true,
               "vendorChunk": false,
               "buildOptimizer": true,
               "budgets": [{
