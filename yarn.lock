@@ -196,11 +196,6 @@
   resolved "https://registry.yarnpkg.com/@angular/material/-/material-9.0.0-rc.4.tgz#a64152453904b8cff58985af22b639ee0f5d9cc5"
   integrity sha512-gg/CxwlGuMwXTRkY2DMrRb4GYmL1lksJ5cdnkCVm2locX8kH+ocht8kt6f39E8wBhHmg4jczfLnauRjU+PJ7ug==
 
-"@angular/platform-browser-dynamic@^9.0.0-rc.5":
-  version "9.0.0-rc.5"
-  resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-9.0.0-rc.5.tgz#6beb6e5f625df5939b757b80f7f39134e95769f0"
-  integrity sha512-MCDIuwcFlXo4f/ro9NiYcV1t8SBdt22dXjQWWSij+ABlVqrW7Xwl8oNq0q2+HJQIlg+a37Y2svJouUN1kLvZ3A==
-
 "@angular/platform-browser@^9.0.0-rc.5":
   version "9.0.0-rc.5"
   resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-9.0.0-rc.5.tgz#b10dcd5df71c33e7bff48154ae3876de5236eb5e"
