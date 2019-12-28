@@ -26,7 +26,7 @@
     "date-fns": "^2.8.1",
     "firebase": "^7.6.1",
     "material-icons": "^0.3.1",
-    "rxjs": "^6.5.3",
+    "rxjs": "^6.5.4",
     "scss-spinners": "^1.1.16",
     "zone.js": "^0.10.2"
   },
