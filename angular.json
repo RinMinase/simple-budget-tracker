@@ -22,10 +22,7 @@
             "main": "src/index.ts",
             "tsConfig": "tsconfig.json",
             "aot": true,
-            "extractCss": true,
-            "extractLicenses": false,
             "styles": [ "src/index.scss" ],
-            "scripts": [],
             "assets": [{
               "glob": "favicon.ico",
               "input": "assets/",
@@ -48,6 +45,8 @@
               "namedChunks": false,
               "vendorChunk": false,
               "buildOptimizer": true,
+              "extractCss": true,
+              "extractLicenses": false,
               "budgets": [{
                 "type": "initial",
                 "maximumWarning": "2mb",
