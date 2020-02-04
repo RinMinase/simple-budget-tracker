@@ -5,7 +5,7 @@
         <img alt="Netlify-Status" src="https://img.shields.io/netlify/09b5bb1d-24a5-401d-b322-a267a04efd00?logo=netlify&style=for-the-badge">
     </a>
     <a href="https://angular.io/">
-        <img alt="Angular" src="https://img.shields.io/badge/angular-%5E9.0.0--rc.2-red.svg?logo=angular&style=for-the-badge">
+        <img alt="Angular" src="https://img.shields.io/badge/angular-%5E9.0.0--rc.14-red.svg?logo=angular&style=for-the-badge">
     </a>
 </p>
 
