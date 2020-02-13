@@ -27,7 +27,7 @@
     "firebase": "^7.8.1",
     "material-icons": "^0.3.1",
     "rxjs": "^6.5.4",
-    "scss-spinners": "^1.1.19",
+    "scss-spinners": "^1.2.0",
     "zone.js": "^0.10.2"
   },
   "devDependencies": {
