@@ -37,8 +37,8 @@
     "@angular/compiler": "^9.0.4",
     "@angular/compiler-cli": "^9.0.4",
     "@angular/platform-browser": "^9.0.4",
-    "tslib": "^1.11.0",
-    "typescript": "^3.8.2"
+    "tslib": "^1.11.1",
+    "typescript": "^3.8.3"
   },
   "browserslist": [
     "last 2 Chrome versions",
