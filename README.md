@@ -67,7 +67,7 @@ Task automation is based on [Yarn scripts](https://yarnpkg.com/lang/en/docs/cli/
 
 ## Built with
 * <img width=20 height=20 src="https://angular.io/assets/images/favicons/favicon.ico"> [Angular 9](https://angular.io/) - Web Framework
-* <img width=20 height=20 src="https://www.typescriptlang.org/icons/icon-48x48.png"> [TypeScript](https://www.typescriptlang.org/) - Language syntax
+* <img width=20 height=20 src="https://www.typescriptlang.org/assets/images/icons/favicon.ico"> [TypeScript](https://www.typescriptlang.org/) - Language syntax
 * <img width=20 height=20 src="https://sass-lang.com/favicon.ico"> [Sassy CSS (SCSS)](https://sass-lang.com/) - CSS pre-processor
 * <img width=20 height=20 src="https://material.angular.io/assets/img/favicons/favicon-32x32.png"> [Angular Material](https://material.angular.io/) - HTML Framework (layout)
 * <img width=20 height=20 src="https://firebase.google.com/favicon.ico"> [Firebase](https://firebase.google.com/) - Database
