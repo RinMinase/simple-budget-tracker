@@ -5,7 +5,7 @@
         <img alt="Netlify-Status" src="https://img.shields.io/netlify/09b5bb1d-24a5-401d-b322-a267a04efd00?logo=netlify&style=for-the-badge">
     </a>
     <a href="https://angular.io/">
-        <img alt="Angular" src="https://img.shields.io/badge/angular-%5E9.0-red.svg?logo=angular&style=for-the-badge">
+        <img alt="Angular" src="https://img.shields.io/badge/angular-%5E10.0-red.svg?logo=angular&style=for-the-badge">
     </a>
 </p>
 
@@ -66,7 +66,7 @@ _Add info here_
 Task automation is based on [Yarn scripts](https://yarnpkg.com/lang/en/docs/cli/run/) or [NPM scripts](https://docs.npmjs.com/misc/scripts).
 
 ## Built with
-* <img width=20 height=20 src="https://angular.io/assets/images/favicons/favicon.ico"> [Angular 9](https://angular.io/) - Web Framework
+* <img width=20 height=20 src="https://angular.io/assets/images/favicons/favicon.ico"> [Angular 10](https://angular.io/) - Web Framework
 * <img width=20 height=20 src="https://www.typescriptlang.org/assets/images/icons/favicon.ico"> [TypeScript](https://www.typescriptlang.org/) - Language syntax
 * <img width=20 height=20 src="https://sass-lang.com/favicon.ico"> [Sassy CSS (SCSS)](https://sass-lang.com/) - CSS pre-processor
 * <img width=20 height=20 src="https://material.angular.io/assets/img/favicons/favicon-32x32.png"> [Angular Material](https://material.angular.io/) - HTML Framework (layout)
