@@ -35,7 +35,15 @@
               "glob": "_redirects",
               "input": "assets/",
               "output": "/"
-            }]
+            }],
+            "allowedCommonJsDependencies": [
+              "firebase/app",
+              "@firebase/app",
+              "@firebase/firestore",
+              "@firebase/component",
+              "@firebase/util",
+              "zone.js/dist/zone"
+            ]
           },
           "configurations": {
             "production": {
