@@ -17,8 +17,8 @@ import { AppService } from "@core/app.service";
 class AppComponent {
 	constructor(private service: AppService) {
 		const firebaseConfig = {
-			apiKey: "AIzaSyAqBGJy6mRnHjhU_YmeebSODruhfYHClj4",
-			projectId: "budget-tracker-50645",
+			apiKey: process.env.FIREBASE_API_KEY || "",
+			projectId: process.env.FIREBASE_PROJECT_ID || "",
 		};
 
 		initializeApp(firebaseConfig);
