@@ -15,32 +15,41 @@ _Add info here_
 ## Getting Started
 
 ### Running the project
-1. [Download](https://nodejs.org/en/) the latest Node version. This is marked as `<version number> Current`. Install it on your machine.
+Installations Required:
+- [Node](https://nodejs.org/en/)
+- [Yarn](https://yarnpkg.com/latest.msi)
 
-2. _(Optional)_ [Download](https://yarnpkg.com/latest.msi) Yarn. This is a faster package manager than the default `npm` one.
-
-3. Clone the project
+1. Clone the project, and copy the ENV template file to a new ENV file
 
     ```
     git clone https://github.com/RinMinase/simple-budget-tracker.git
     cd simple-budget-tracker
+    cp .env.example .env
     ```
 
-4. Install the dependencies then run the project
+2. Modify the created ENV file `(.env)` based on your Firebase configuration
 
-    ```
-    npm install
-    npm start
-    ```
-
-    **Note:** If you have installed Yarn, run these instead:
+3. Install the dependencies then run the project
 
     ```
     yarn install
     yarn start
     ```
 
-5. Fire up your browser and go to `localhost:3000`
+4. Fire up your browser and go to `localhost:3000`
+
+### Building the project
+Installations Required:
+- [Node](https://nodejs.org/en/)
+- [Yarn](https://yarnpkg.com/latest.msi)
+
+1. Fire up your terminal inside the project folder.
+
+2. Build the project by running:
+
+    ```
+    yarn build
+    ```
 
 ### Directory Structure
     .
@@ -60,10 +69,6 @@ _Add info here_
     ├── angular.json                     # Angular CLI configuration
     ├── tsconfig.json                    # Main TypeScript configuration file
     └── ...                              # Other project files
-
-### Project tasks
-
-Task automation is based on [Yarn scripts](https://yarnpkg.com/lang/en/docs/cli/run/) or [NPM scripts](https://docs.npmjs.com/misc/scripts).
 
 ## Built with
 * <img width=20 height=20 src="https://angular.io/assets/images/favicons/favicon.ico"> [Angular 10](https://angular.io/) - Web Framework
