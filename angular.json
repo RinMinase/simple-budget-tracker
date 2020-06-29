@@ -80,12 +80,13 @@
             }
           },
           "configurations": {
-            "production": { 
-              "browserTarget": "simple-budget-tracker:build:production" 
+            "production": {
+              "browserTarget": "simple-budget-tracker:build:production"
             }
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "simple-budget-tracker"
 }
