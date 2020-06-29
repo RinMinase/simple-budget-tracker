@@ -5,26 +5,19 @@
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
-    "module": "esnext",
-    "moduleResolution": "node",
     "downlevelIteration": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "target": "es2015",
-    "typeRoots": [ "node_modules/@types" ],
+    "target": "es5",
+    "module": "es2020",
+    "moduleResolution": "node",
     "lib": [ "es2018", "dom" ],
-    "types": [ "node" ],
     "paths": {
       "@core/*": ["src/core/*"],
     }
   },
   "angularCompilerOptions": {
-    "enableIvy": true,
     "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true,
-    "disableTypeScriptVersionCheck": true
   },
   "files": [ "src/index.ts" ],
   "include": [ "src/**/*.ts" ]
